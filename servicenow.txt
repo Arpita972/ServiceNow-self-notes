@@ -1,0 +1,20 @@
+1.	ServiceNow is a cloud-based platform that helps companies manage their daily work in an organized and automated way. In simple terms, it works like a smart ticketing system.
+For example, if an employee has an issue like a laptop problem or email not working, they raise a request in ServiceNow. The system automatically creates a ticket, assigns it to the right team, tracks the progress, and ensures the issue is resolved on time.
+It reduces manual work, improves efficiency, and helps organizations provide faster and better service. It’s widely used in IT, HR, and customer support processes.
+2.	UI Policies in ServiceNow are used to control the behavior of form fields. UI Policies are used to dynamically control form fields like show, hide, mandatory, or read-only based on conditions.
+
+3.	Client Scripts allow us to write JavaScript to perform advanced operations like validating data, calculating values, calling server-side logic, or handling events like onLoad, onChange, and onSubmit.
+
+	How UI policy is different from client script?
+4.	Note :- UI Policies are useful for simple tasks like showing, hiding, or making fields mandatory. But when we need more complex logic or scripting, we use Client Scripts.
+5.	For example, if I want to validate that a user enters a correct email format or calculates a field value based on multiple conditions, UI Policy won’t be enough — so we use Client Script.
+
+6.	UI Actions in ServiceNow are used to add custom buttons, links, or context menu options on forms. These buttons allow users to perform specific actions with a single click.
+Note :-  UI Actions can run both client-side and server-side scripts, so they are very powerful for performing custom operations.
+
+	How UI actions is different from Business rule?
+Note:- UI Actions and Business Rules are both used for automation in ServiceNow, but they serve different purposes.
+•	UI Actions are user-triggered. They appear as buttons or links on the form, and the action happens only when the user clicks them. For  example, a ‘Close Incident’ button.
+•	On the other hand, Business Rules are system-triggered. They run automatically in the backend when a record is inserted, updated, or deleted, without any user interaction. For example, automatically setting priority based on impact and urgency when a ticket is created.
+•	So, UI Actions require user action, while Business Rules run automatically based on conditions.
+
