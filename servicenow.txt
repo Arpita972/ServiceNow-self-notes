@@ -3,13 +3,56 @@ For example, if an employee has an issue like a laptop problem or email not work
 It reduces manual work, improves efficiency, and helps organizations provide faster and better service. It’s widely used in IT, HR, and customer support processes.
 2.	UI Policies in ServiceNow are used to control the behavior of form fields. UI Policies are used to dynamically control form fields like show, hide, mandatory, or read-only based on conditions.
 
-3.	Client Scripts allow us to write JavaScript to perform advanced operations like validating data, calculating values, calling server-side logic, or handling events like onLoad, onChange, and onSubmit.
+3.	Client Scripts Client Scripts in ServiceNow are used to control the behavior of forms on the client side. It helps in making forms dynamic, validating user input, and improving overall user experience without needing server interaction.
+
+	onLoad 
+onLoad runs when the form is opened. It is mainly used to set up the form before the user starts working.
+👉 Use cases:
+•	Set default values 
+•	Make fields read-only 
+•	Show messages
+	onChange
+onChange runs whenever a user changes the value of a field. It helps in giving immediate response based on user input.
+👉 Use cases:
+•	Show/hide fields 
+•	Auto-fill values 
+•	Apply conditions dynamically
+
+	onSubmit 
+onSubmit runs when the user submits the form. It is mainly used for validation before saving the record.
+👉 Use cases:
+•	Prevent incorrect data 
+•	Validate fields 
+•	Show error messages
+
+	onCellEdit 
+onCellEdit runs when a user edits a field directly in the list view instead of opening the form.
+👉 Use cases:
+•	Validate list edits 
+•	Restrict changes
+
+
 
 	How UI policy is different from client script?
-4.	Note :- UI Policies are useful for simple tasks like showing, hiding, or making fields mandatory. But when we need more complex logic or scripting, we use Client Scripts.
-5.	For example, if I want to validate that a user enters a correct email format or calculates a field value based on multiple conditions, UI Policy won’t be enough — so we use Client Script.
+Note :- UI Policies are useful for simple tasks like showing, hiding, or making fields mandatory. But when we need more complex logic or scripting, we use Client Scripts.
+For example, if I want to validate that a user enters a correct email format or calculates a field value based on multiple conditions, UI Policy won’t be enough — so we use Client Script.
+4.	Business Rules are server-side scripts that run automatically on database operations like insert, update, or delete.
+ 	Before
+o	Runs before the record is saved in the database 
+o	Used to validate or modify data
+ 	After
+o	Runs after the record is saved 
+o	Used to perform additional actions
+ 	Async
+o	Runs in the background (not immediately) 
+o	Improves performance
+ 	Display
+o	Runs when the form is loaded/opened 
+o	Used to send data from server to client
 
-6.	UI Actions in ServiceNow are used to add custom buttons, links, or context menu options on forms. These buttons allow users to perform specific actions with a single click.
+Note: - Mostly Before for validation and After/Async for notifications and automation.
+
+5.	UI Actions in ServiceNow are used to add custom buttons, links, or context menu options on forms. These buttons allow users to perform specific actions with a single click.
 Note :-  UI Actions can run both client-side and server-side scripts, so they are very powerful for performing custom operations.
 
 	How UI actions is different from Business rule?
