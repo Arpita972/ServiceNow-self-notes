@@ -1,9 +1,11 @@
-1.	ServiceNow is a cloud-based platform that helps companies manage their daily work in an organized and automated way. In simple terms, it works like a smart ticketing system.
-For example, if an employee has an issue like a laptop problem or email not working, they raise a request in ServiceNow. The system automatically creates a ticket, assigns it to the right team, tracks the progress, and ensures the issue is resolved on time.
+1.	Service Now is a cloud-based platform that helps companies manage their daily work in an organized and automated way. In simple terms, it works like a smart ticketing system.
+For example, if an employee has an issue like a laptop problem or email not working, they raise a request in Service Now. The system automatically creates a ticket, assigns it to the right team, tracks the progress, and ensures the issue is resolved on time.
 It reduces manual work, improves efficiency, and helps organizations provide faster and better service. It’s widely used in IT, HR, and customer support processes.
-2.	UI Policies in ServiceNow are used to control the behavior of form fields. UI Policies are used to dynamically control form fields like show, hide, mandatory, or read-only based on conditions.
+2.	UI Policies are client side logic which dynamically changes the behavior of information on a form. It helps to make field mandatory, read only and hidden.
+•	We can also run client side script in UI policies if required.
+•	Performance wise UI policies are faster than of client script. But if we talks about in terms of execution of scripts then client script execute before the UI policies.
 
-3.	Client Scripts Client Scripts in ServiceNow are used to control the behavior of forms on the client side. It helps in making forms dynamic, validating user input, and improving overall user experience without needing server interaction.
+3.	Client Scripts Client Scripts in Service Now are used to control the behavior of forms on the client side. It helps in making forms dynamic, validating user input, and improving overall user experience without needing server interaction.
 
 	onLoad 
 onLoad runs when the form is opened. It is mainly used to set up the form before the user starts working.
@@ -34,7 +36,7 @@ onCellEdit runs when a user edits a field directly in the list view instead of o
 
 
 	How UI policy is different from client script?
-Note :- UI Policies are useful for simple tasks like showing, hiding, or making fields mandatory. But when we need more complex logic or scripting, we use Client Scripts.
+Note:- UI Policies are useful for simple tasks like showing, hiding, or making fields mandatory. But when we need more complex logic or scripting, we use Client Scripts.
 For example, if I want to validate that a user enters a correct email format or calculates a field value based on multiple conditions, UI Policy won’t be enough — so we use Client Script.
 4.	Business Rules are server-side scripts that run automatically on database operations like insert, update, or delete.
  	Before
@@ -50,14 +52,54 @@ o	Improves performance
 o	Runs when the form is loaded/opened 
 o	Used to send data from server to client
 
-Note: - Mostly Before for validation and After/Async for notifications and automation.
+Note: - Mostly before for validation and After/Async for notifications and automation.
 
-5.	UI Actions in ServiceNow are used to add custom buttons, links, or context menu options on forms. These buttons allow users to perform specific actions with a single click.
-Note :-  UI Actions can run both client-side and server-side scripts, so they are very powerful for performing custom operations.
+5.	UI Actions in Service Now are used to add custom buttons, links, or context menu options on forms. These buttons allow users to perform specific actions with a single click.
+Note:- UI Actions can run both client-side and server-side scripts, so they are very powerful for performing custom operations.
 
-	How UI actions is different from Business rule?
-Note:- UI Actions and Business Rules are both used for automation in ServiceNow, but they serve different purposes.
-•	UI Actions are user-triggered. They appear as buttons or links on the form, and the action happens only when the user clicks them. For  example, a ‘Close Incident’ button.
+	How UI actions are different from Business rule?
+Note:- UI Actions and Business Rules are both used for automation in Service Now, but they serve different purposes.
+•	UI Actions are user-triggered. They appear as buttons or links on the form, and the action happens only when the user clicks them. For example, a ‘Close Incident’ button.
 •	On the other hand, Business Rules are system-triggered. They run automatically in the backend when a record is inserted, updated, or deleted, without any user interaction. For example, automatically setting priority based on impact and urgency when a ticket is created.
 •	So, UI Actions require user action, while Business Rules run automatically based on conditions.
+ITSM (IT Service Management) is a structured way of managing IT services so that they support business needs.
+•	It uses defined processes (not random work) to handle services like email, applications, and systems.
+•	Business (Goals & Needs) ----> ITSM (Processes & Governance) ----> IT Services (Email, Apps, Systems, etc.) 
+ITSM acts as a bridge between business needs and IT services.
 
+NOTE: - ITSM Is NOT a Tool
+•	ITSM is an approach or framework 
+•	Tools like Service Now, BMC, or Jira are used only to implement ITSM
+
+•	ITSM defines how work should be done 
+•	Tools help execute those processes
+
+Key Points to Remember (Very Important for Interview)
+•	Structured Approach
+Work is done using defined processes (not random or ad-hoc) 
+•	Service-Focused
+Focus is on delivering IT services, not just managing technology 
+•	Business-Oriented
+IT exists to support: 
+o	 Business operations 
+o	 Productivity 
+o	 Customer experience
+
+For example, when a new employee joins, ITSM ensures all required services like system access, email account, and software are provided through a structured request process, so the employee can start work without delay.
+
+For example, when an employee forgets their system password, ITSM ensures there is a standard request process where the user raises a request, gets approval if needed, and the password is reset securely within defined timelines.
+
+For example, when a company plans to upgrade a system, ITSM ensures it goes through a proper change management process, including risk assessment, approvals, and testing, to avoid business disruption.”
+
+   ITSM manages IT activities through well-defined processes like incident management for quick issue resolution, service request management for handling user needs, problem management to identify root causes, and change management to implement fixes safely. Together, these processes ensure system stability, controlled changes, and continuous improvement in IT services.
+   For example, if a server goes down, it is handled as an incident to restore service quickly. Then problem management identifies why it failed, and change management ensures a permanent fix is applied without risk. At the same time, users may raise service requests related to access or support.
+   Incident → Problem → Change
+     ↓
+  Service Request
+   Incident Handling Flow:-
+   When a user faces an issue, it is logged as an incident, then prioritized based on urgency and impact. The support team resolves the issue, and finally the service is restored. This structured flow ensures quick resolution, proper tracking, and accountability in IT services.
+   User Issue ----> Incident Logged ----> Priority Assigned ----> Issue Resolved ----> Service Restored
+ITIL (Information Technology Infrastructure Library)
+   ITIL is a set of best practices that provides guidance on how to manage IT services effectively. ITSM is the actual implementation of managing IT services, while ITIL acts as a framework that guides how ITSM should be done in a structured and efficient way.
+   ITSM is the overall approach to managing IT services, while ITIL is a set of best practices that guides how ITSM should be implemented. ITSM focuses on what needs to be managed, like processes and services, whereas ITIL provides guidelines on how to manage them effectively. For example, in incident management, ITSM ensures incidents are handled, while ITIL suggests best practices like prioritization and escalation.
+   For example, ITSM handles incidents and service requests, while ITIL provides guidelines on how to manage incidents efficiently, like defining priority, escalation, and resolution steps.
